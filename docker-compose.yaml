@@ -10,6 +10,9 @@ services:
     ports:
       - 5432:5432
     restart: unless-stopped
+    volumes:
+      - /pg-db:/var/lib/postgresql/data
+
   supertokens:
     image: registry.supertokens.io/supertokens/supertokens-postgresql:4.3
     ports:
